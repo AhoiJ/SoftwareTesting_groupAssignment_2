@@ -1,7 +1,5 @@
-
 import isObject from "../src/isObjectLike.js";
 import chai from "chai"
-//var chai = require("chai")
 const expect = chai.expect
 
 
@@ -17,8 +15,12 @@ describe("isObjectLike", () => {
         expect(isObject()).to.equal(false)
     });
     it("Check with object, true", () => {
+        var obj = {}
+        expect(isObject(obj)).to.equal(true)
+    });
+    it("Check with array object, true", () => {
         expect(isObject([1,2,3])).to.equal(true)
-    })
+    });
 
 });
 
