@@ -21,6 +21,10 @@ describe("isTypedArray", () => {
     it("Check with array object, false", () => {
         expect(isTypedArray([1,2,3])).to.equal(false)
     });
+    it("Check with null typed array, true", () => {
+        var typedArray = new Uint8Array([null]);
+        expect(isTypedArray(typedArray)).to.equal(true)
+    });
     it("Check with typed array, true", () => {
         var typedArray = new Uint8Array([1, 2, 3, 4]);
         expect(isTypedArray(typedArray)).to.equal(true)
