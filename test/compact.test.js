@@ -6,13 +6,13 @@ const expect = chai.expect
 describe("compact", () => {
 
     it("Check without falsey, should return [1, 2, 3, 4, 5]", ()=>{
-        expect(compact([1, 2, 3, 4, 5])).to.equal([1, 2, 3, 4, 5])
+        expect(compact([1, 2, 3, 4, 5])).to.deep.equal([1, 2, 3, 4, 5])
     });
     it("Check with false, should return [1, 2, 3]", ()=>{
         expect(compact([1, false, 2, 3])).to.deep.equal([1, 2, 3])
     });
     it("Check with zero, should return [1, 2, 3]", ()=>{
-        expect(compact([0, 1, 2, 3])).to.deep.equal([1, 2, 3])
+        expect(compact(['a', 'b', 'c', NaN])).to.deep.equal(['a', 'b', 'c'])
     });
     it("Check with null, should return [1, 2, 3]", ()=>{
         expect(compact([1, 2, 3, null])).to.deep.equal([1, 2, 3])
