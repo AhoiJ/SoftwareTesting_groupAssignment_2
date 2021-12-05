@@ -12,7 +12,7 @@ describe("compact", () => {
         expect(compact([1, false, 2, 3])).to.deep.equal([1, 2, 3])
     });
     it("Check with zero, should return [1, 2, 3]", ()=>{
-        expect(compact(['a', 'b', 'c', NaN])).to.deep.equal(['a', 'b', 'c'])
+        expect(compact([0, 1, 2, 3])).to.deep.equal([1, 2, 3])
     });
     it("Check with null, should return [1, 2, 3]", ()=>{
         expect(compact([1, 2, 3, null])).to.deep.equal([1, 2, 3])
