@@ -12,7 +12,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "mochawesome": "^7.0.1",
     "requirejs": "^2.3.6"
   },
   "devDependencies": {
